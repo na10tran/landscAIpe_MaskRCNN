@@ -32,7 +32,7 @@ model.load_weights(filepath="Kangaro_mask_rcnn_trained.h5",
                    by_name=True)
 
 # load the input image, convert it from BGR to RGB channel
-image = cv2.imread("sample2.jpg")
+image = cv2.imread("kanga1.jpg")
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
 # Perform a forward pass of the network to obtain the results
@@ -48,3 +48,4 @@ mrcnn.visualize.display_instances(image=image,
                                   class_ids=r['class_ids'], 
                                   class_names=CLASS_NAMES, 
                                   scores=r['scores'])
+mrcnn.visua
